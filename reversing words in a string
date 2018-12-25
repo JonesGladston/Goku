@@ -3,9 +3,8 @@
 int main()
 {
 	char a[20],b[20];
-	int i,lcount=0,wcount=0;
+	int i,j,lcount=0,wcount=0;
 	gets(a);  //scanf("%[^\n]s",&a);
-	printf("%s",a);
 	for(i=0;a[i]!='\0';i++)
 	{
 		if(a[i]!=' ')
@@ -16,11 +15,11 @@ int main()
 		}
 		else
 		{
-			wcount++;
+			//wcount++;
 			//printf("current Wcount : %d\n",wcount);
-			for(i=lcount;i>=0;i--)
+			for(j=lcount;j>=0;j--)
 			{
-				printf("%c",b[i]);
+				printf("%c",b[j]);
 			}
 			lcount=0;
 		}
