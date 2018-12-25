@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	char a[20],b[20];
+	int i,lcount=0,wcount=0;
+	gets(a);  //scanf("%[^\n]s",&a);
+	printf("%s",a);
+	for(i=0;a[i]!='\0';i++)
+	{
+		if(a[i]!=' ')
+		{
+			b[i]=a[i];
+			lcount++;
+			//printf("current Lcount : %d\n",lcount); //jst fr checking letter count
+		}
+		else
+		{
+			wcount++;
+			//printf("current Wcount : %d\n",wcount);
+			for(i=lcount;i>=0;i--)
+			{
+				printf("%c",b[i]);
+			}
+			lcount=0;
+		}
+	}
+	getch();
+	return 0;
+
+}
